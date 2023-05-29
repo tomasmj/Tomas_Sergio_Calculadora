@@ -76,10 +76,6 @@ public class Ventana extends JFrame {
 		contentPane.add(btn_seis);
 		
 		JButton btn_uno = new JButton("1");
-		btn_uno.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btn_uno.setBounds(66, 276, 49, 50);
 		contentPane.add(btn_uno);
 		
@@ -108,10 +104,6 @@ public class Ventana extends JFrame {
 		contentPane.add(btn_multiplicación);
 		
 		JButton btn_division = new JButton("/");
-		btn_division.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btn_division.setBounds(395, 336, 49, 50);
 		contentPane.add(btn_division);
 		

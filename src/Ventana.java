@@ -39,7 +39,7 @@ public class Ventana extends JFrame {
 	 */
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 518, 442);
+		setBounds(100, 100, 494, 443);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(128, 128, 128));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -55,7 +55,7 @@ public class Ventana extends JFrame {
 				textField_resultado.setText(textField_resultado.getText() + "7");
 			}
 		});
-		btn_siete.setBounds(66, 156, 49, 50);
+		btn_siete.setBounds(76, 156, 49, 50);
 		contentPane.add(btn_siete);
 		
 		JButton btn_borrar = new JButton("C");
@@ -106,7 +106,7 @@ public class Ventana extends JFrame {
 				textField_resultado.setText(textField_resultado.getText() + "4");
 			}
 		});
-		btn_cuatro.setBounds(66, 216, 49, 50);
+		btn_cuatro.setBounds(76, 216, 49, 50);
 		contentPane.add(btn_cuatro);
 		
 		JButton btn_cinco = new JButton("5");
@@ -139,7 +139,7 @@ public class Ventana extends JFrame {
 				textField_resultado.setText(textField_resultado.getText() + "1");
 			}
 		});
-		btn_uno.setBounds(66, 276, 49, 50);
+		btn_uno.setBounds(76, 276, 49, 50);
 		contentPane.add(btn_uno);
 		
 		JButton btn_dos = new JButton("2");
@@ -174,6 +174,7 @@ public class Ventana extends JFrame {
 		});
 		btn_cero.setBounds(153, 336, 49, 50);
 		contentPane.add(btn_cero);
+		
 		
 		JButton btn_suma = new JButton("+");
 		btn_suma.setFont(new Font("Tahoma", Font.BOLD, 13));
@@ -253,9 +254,8 @@ public class Ventana extends JFrame {
 		btn_resultado.setBounds(231, 336, 49, 50);
 		contentPane.add(btn_resultado);
 		
+		
 		JButton btn_coma = new JButton(".");
-		btn_coma.setFont(new Font("Tahoma", Font.BOLD, 13));
-		btn_coma.setBackground(Color.CYAN);
 		btn_coma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!textField_resultado.getText().contains(".")) {
@@ -263,7 +263,7 @@ public class Ventana extends JFrame {
 				}
 			}
 		});
-		btn_coma.setBounds(66, 336, 49, 50);
+		btn_coma.setBounds(76, 336, 49, 50);
 		contentPane.add(btn_coma);
 	}
 

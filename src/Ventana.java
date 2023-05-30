@@ -181,6 +181,9 @@ public class Ventana extends JFrame {
 		btn_suma.setBackground(Color.ORANGE);
 		btn_suma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField_resultado.getText().equalsIgnoreCase("")) {
+					n1=0;
+				}
 				n1=Double.parseDouble(textField_resultado.getText());
 				textField_resultado.setText("");
 				operacion="+";
@@ -194,6 +197,9 @@ public class Ventana extends JFrame {
 		btn_resta.setBackground(Color.ORANGE);
 		btn_resta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField_resultado.getText().equalsIgnoreCase("")) {
+					n1=0;
+				}
 				n1=Double.parseDouble(textField_resultado.getText());
 				textField_resultado.setText("");
 				operacion="-";
@@ -207,6 +213,9 @@ public class Ventana extends JFrame {
 		btn_multiplicación.setBackground(Color.ORANGE);
 		btn_multiplicación.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField_resultado.getText().equalsIgnoreCase("")) {
+					n1=0;
+				}
 				n1=Double.parseDouble(textField_resultado.getText());
 				textField_resultado.setText("");
 				operacion="*";
@@ -220,6 +229,9 @@ public class Ventana extends JFrame {
 		btn_division.setBackground(Color.ORANGE);
 		btn_division.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(textField_resultado.getText().equalsIgnoreCase("")) {
+					n1=0;
+				}
 				n1=Double.parseDouble(textField_resultado.getText());
 				textField_resultado.setText("");
 				operacion="/";
@@ -256,6 +268,8 @@ public class Ventana extends JFrame {
 		
 		
 		JButton btn_coma = new JButton(".");
+		btn_coma.setBackground(Color.CYAN);
+		btn_coma.setFont(new Font("Tahoma", Font.BOLD, 13));
 		btn_coma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!textField_resultado.getText().contains(".")) {

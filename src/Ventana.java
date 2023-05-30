@@ -258,7 +258,9 @@ public class Ventana extends JFrame {
 		btn_coma.setBackground(Color.CYAN);
 		btn_coma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField_resultado.setText(textField_resultado.getText() + ".");
+				if(!textField_resultado.getText().contains(".")) {
+					textField_resultado.setText(textField_resultado.getText() + ".");
+				}
 			}
 		});
 		btn_coma.setBounds(66, 336, 49, 50);

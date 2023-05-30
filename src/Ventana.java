@@ -14,6 +14,8 @@ public class Ventana extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField_resultado;
+	private double n1,n2;
+	private String operacion;
 
 	/**
 	 * Launch the application.
@@ -149,29 +151,77 @@ public class Ventana extends JFrame {
 		contentPane.add(btn_cero);
 		
 		JButton btn_suma = new JButton("+");
+		btn_suma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				n1=Double.parseDouble(textField_resultado.getText());
+				textField_resultado.setText("");
+				operacion="+";
+			}
+		});
 		btn_suma.setBounds(395, 156, 49, 50);
 		contentPane.add(btn_suma);
 		
 		JButton btn_resta = new JButton("-");
+		btn_resta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				n1=Double.parseDouble(textField_resultado.getText());
+				textField_resultado.setText("");
+				operacion="-";
+			}
+		});
 		btn_resta.setBounds(395, 216, 49, 50);
 		contentPane.add(btn_resta);
 		
 		JButton btn_multiplicación = new JButton("*");
+		btn_multiplicación.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				n1=Double.parseDouble(textField_resultado.getText());
+				textField_resultado.setText("");
+				operacion="*";
+			}
+		});
 		btn_multiplicación.setBounds(395, 276, 49, 50);
 		contentPane.add(btn_multiplicación);
 		
 		JButton btn_division = new JButton("/");
+		btn_division.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				n1=Double.parseDouble(textField_resultado.getText());
+				textField_resultado.setText("");
+				operacion="/";
+			}
+		});
 		btn_division.setBounds(395, 336, 49, 50);
 		contentPane.add(btn_division);
 		
 		JButton btn_resultado = new JButton("=");
+		btn_resultado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				n2=Double.parseDouble(textField_resultado.getText());
+				textField_resultado.setText("");
+				switch(operacion) {
+				case "+":
+					textField_resultado.setText(String.valueOf(n1+n2));
+					break;
+				case "-":
+					textField_resultado.setText(String.valueOf(n1-n2));
+					break;
+				case "*":
+					textField_resultado.setText(String.valueOf(n1*n2));
+					break;
+				case "/":
+					textField_resultado.setText(String.valueOf(n1/n2));
+					break;
+				}				
+			}
+		});
 		btn_resultado.setBounds(231, 336, 49, 50);
 		contentPane.add(btn_resultado);
 		
-		JButton btn_coma = new JButton(",");
+		JButton btn_coma = new JButton(".");
 		btn_coma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField_resultado.setText(textField_resultado.getText() + ",");
+				textField_resultado.setText(textField_resultado.getText() + ".");
 			}
 		});
 		btn_coma.setBounds(66, 336, 49, 50);

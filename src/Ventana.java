@@ -148,6 +148,7 @@ public class Ventana extends JFrame {
 		btn_cero.setBounds(153, 336, 49, 50);
 		contentPane.add(btn_cero);
 		
+		
 		JButton btn_suma = new JButton("+");
 		btn_suma.setBounds(395, 156, 49, 50);
 		contentPane.add(btn_suma);
@@ -167,6 +168,7 @@ public class Ventana extends JFrame {
 		JButton btn_resultado = new JButton("=");
 		btn_resultado.setBounds(231, 336, 49, 50);
 		contentPane.add(btn_resultado);
+		
 		
 		JButton btn_coma = new JButton(",");
 		btn_coma.addActionListener(new ActionListener() {

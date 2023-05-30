@@ -183,9 +183,10 @@ public class Ventana extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(textField_resultado.getText().equalsIgnoreCase("")) {
 					n1=0;
+				}else {
+					n1=Double.parseDouble(textField_resultado.getText());
+					textField_resultado.setText("");
 				}
-				n1=Double.parseDouble(textField_resultado.getText());
-				textField_resultado.setText("");
 				operacion="+";
 			}
 		});
@@ -199,9 +200,10 @@ public class Ventana extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(textField_resultado.getText().equalsIgnoreCase("")) {
 					n1=0;
+				}else {
+					n1=Double.parseDouble(textField_resultado.getText());
+					textField_resultado.setText("");
 				}
-				n1=Double.parseDouble(textField_resultado.getText());
-				textField_resultado.setText("");
 				operacion="-";
 			}
 		});
@@ -215,9 +217,10 @@ public class Ventana extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(textField_resultado.getText().equalsIgnoreCase("")) {
 					n1=0;
+				}else {
+					n1=Double.parseDouble(textField_resultado.getText());
+					textField_resultado.setText("");
 				}
-				n1=Double.parseDouble(textField_resultado.getText());
-				textField_resultado.setText("");
 				operacion="*";
 			}
 		});
@@ -231,9 +234,10 @@ public class Ventana extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(textField_resultado.getText().equalsIgnoreCase("")) {
 					n1=0;
+				}else {
+					n1=Double.parseDouble(textField_resultado.getText());
+					textField_resultado.setText("");
 				}
-				n1=Double.parseDouble(textField_resultado.getText());
-				textField_resultado.setText("");
 				operacion="/";
 			}
 		});
